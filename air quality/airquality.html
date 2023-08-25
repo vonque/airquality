@@ -10,17 +10,78 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto+Mono&display=swap" rel="stylesheet">
     <link rel = "stylesheet" href="styles.css">
     <script src="script.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            
+        }
+        .card {
+            text-align: center;
+        }
+        
+        #particles-js {
+            width: 100%;
+            height: 100vh;
+            background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.5)), url("smoke.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .card{
+            position:absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+    </style>
 </head>
 
 <body>
+    <div id = "particles-js">
     <div class="card">
         <div class="search">
-            <input type="text" class="search-bar">
-            <button><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1.5em" width="2.em" xmlns="http://www.w3.org/2000/svg"><path d="M10,18c1.846,0,3.543-0.635,4.897-1.688l4.396,4.396l1.414-1.414l-4.396-4.396C17.365,13.543,18,11.846,18,10 c0-4.411-3.589-8-8-8s-8,3.589-8,8S5.589,18,10,18z M10,4c3.309,0,6,2.691,6,6s-2.691,6-6,6s-6-2.691-6-6S6.691,4,10,4z"></path><path d="M11.412,8.586C11.791,8.966,12,9.468,12,10h2c0-1.065-0.416-2.069-1.174-2.828c-1.514-1.512-4.139-1.512-5.652,0 l1.412,1.416C9.346,7.83,10.656,7.832,11.412,8.586z"></path></svg></button>
+            <div class="searchbar">
+                <div class="searchbar-wrapper">
+                    <div class="searchbar-left">
+                        <div class="search-icon-wrapper">
+                            <span class="search-icon searchbar-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z">
+                                    </path>
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+            
+                    <div class="searchbar-center">
+                        <div class="searchbar-input-spacer"></div>
+            
+                        <input type="text" class="searchbar-input" maxlength="2048" name="q" autocapitalize="off" autocomplete="off" title="Search" role="combobox" placeholder="Search city">
+                    </div>
+            
+                    <div class="searchbar-right">
+                        <svg class="voice-search" role="button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path fill="#4285f4" d="m12 15c1.66 0 3-1.31 3-2.97v-7.02c0-1.66-1.34-3.01-3-3.01s-3 1.34-3 3.01v7.02c0 1.66 1.34 2.97 3 2.97z">
+                            </path>
+                            <path fill="#34a853" d="m11 18.08h2v3.92h-2z"></path>
+                            <path fill="#fbbc05" d="m7.05 16.87c-1.27-1.33-2.05-2.83-2.05-4.87h2c0 1.45 0.56 2.42 1.47 3.38v0.32l-1.15 1.18z">
+                            </path>
+                            <path fill="#ea4335" d="m12 16.93a4.97 5.25 0 0 1 -3.54 -1.55l-1.41 1.49c1.26 1.34 3.02 2.13 4.95 2.13 3.87 0 6.99-2.92 6.99-7h-1.99c0 2.92-2.24 4.93-5 4.93z">
+                            </path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="weather">
             <h2 class="city">Air quality in Toronto</h2>
-            <h2 class="temp">Temp: 21°C </h2>
+            <h1 class="temp">Temp: 21°C </h1>
             <img src="" alt="" class="icon"/>
             <div class="description">not good</div>
             <div class="humidity">Humidity: 80%</div>
@@ -28,5 +89,9 @@
 
         </div>
     </div>
+    </div>
+    <script src="particles.js"></script>
+    <script src="app.js"></script>
+    <script src="particles.json"></script>
 </body>
-</html>
+</html>  
